@@ -116,6 +116,11 @@ body.fixed-nav {
  min-height: calc(100vh - 56px);
  padding-top: 2rem;
 padding-left: 4px;}
+.table .thead-light th {
+  color: #495057;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
 
 .scroll-to-top {
  position: fixed;
