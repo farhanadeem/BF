@@ -1,510 +1,566 @@
-<!DOCTYPE html><html xmlns:output="http://www.w3.org/2010/xslt-xquery-serialization" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>CIF</title>
-      <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto|Source%20Code%20Pro" rel="stylesheet" type="text/css">
-      <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <link href="../css/styles.css" rel="stylesheet">
-   </head>
-   <body xml:space="preserve" class="fixed-nav sticky-footer bg-lightt" id="page-top">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-lightt fixed-top" id="mainNav">
-
-
-         <div class="collapse navbar-collapse" id="navbarsExampleContainer">
-
-            <div class="mr-auto">
-               <img class="" src="../images/nist.png">
-               <img class="" src="../images/samate.png">
-
-
-               <fontTT>The Bugs Framework (BF)
-                  <span class="remove">-</span>
-                  </fontTT>
-
-               <fontSS>
-                  <span class="remove">
-
-                     <red>Software developers' and testers' "Best Friend"</red>
-                     </span>
-                  </fontSS>
-               </div>
-
-            <form class="form-inline my-2 my-md-0" action="../search.html">
-               <input class="form-control mr-sm-2 tipue_search_input" type="text" placeholder="Search" name="q" id="tipue_search_input">
-               <button class="btn btn-outline-success my-2 my-sm-0 enableOnInput" type="submit" disabled>Search</button>
-               </form>
-            </div>
-         </nav>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
-
-         <div class="mobile ">
-            <img class="img-fluid" src="../images/nist.png">
-            <img class="img-fluid" src="../images/samate.png">
-
-            </div>
-         <span class="ml-auto mobile">
-
-            <fontTT>The Bugs Framework (BF)</fontTT>
-            </span>
-         <span class="mr-auto mobile2">
-
-            <fontTT>The Bugs Framework</fontTT>
-            </span>
-         <button class="navbar-toggler navbar-toggler-right ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-         <div class="collapse navbar-collapse" id="navbarResponsive">
-
-            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Home">
-                  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
-                     <i class="fa fa-fw fa-home"></i>
-                     <span class="nav-link-text">BF Home</span>
-                     </a>
-
-                  <ul class="sidenav-second-level collapse" id="collapseComponents2">
-
-                     <li>
-              <a href="../Home/Terminology.html">Terminology</a>
-            </li>
-            <li>
-              <a href="../Home/Why.html">Why BF?</a>
-            </li>
-            <li >
-              <a  href="../index.html">Overview</a>
-            </li>
-            <li>
-              <a href="../Home/Approach.html">Approach</a>
-            </li>
-            <li>
-              <a href="../Home/Methodology.html">Methodology</a>
-            </li>
-            <li>
-              <a href="../Home/Impacts.html">Potential Impacts</a>
-            </li>
-
-                     </ul>
-                  </li>
-
-
-                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Classes">
-                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents3" data-parent="#exampleAccordion">
-                        <i class="fa fa-fw fa-table"></i>
-                        <span class="nav-link-text">Classes</span>
-                        </a>
-
-                     <ul class="sidenav-second-level collapse " id="collapseComponents3">
-
-
-                        
-                        <li class="nav-item" data-toggle="tooltip" data-placement="right"><a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents21"><span class="nav-link-text">
-                                 <fontL>ATN, AUT</fontL></span></a><ul class="sidenav-third-level collapse " id="collapseComponents21">
-                              <li><a href="../Classes/ATN.html">
-                                    <fontL>ATN</fontL></a></li>
-                              <li><a href="../Classes/AUT.html">
-                                    <fontL>AUT</fontL></a></li>
-                           </ul>
-                        </li>
-
-                        
-                        
-                        <li class="nav-item" data-toggle="tooltip" data-placement="right"><a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents24"><span class="nav-link-text">ENC, KMN, VRF</span></a><ul class="sidenav-third-level collapse " id="collapseComponents24">
-                              <li><a href="../Classes/CRY.html">Model</a></li>
-                              <li><a href="../Classes/ENC.html">ENC</a></li>
-                              <li><a href="../Classes/KMN.html">KMN</a></li>
-                              <li><a href="../Classes/VRF.html">VRF</a></li>
-                           </ul>
-                        </li>
-                        <li class="nav-item" data-toggle="tooltip" data-placement="right"><a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents25"><span class="nav-link-text">IEX</span></a><ul class="sidenav-third-level collapse " id="collapseComponents25">
-                              <li><a href="../Classes/IEXModel.html">Model</a></li>
-                              <li><a href="../Classes/IEX.html">IEX</a></li>
-                           </ul>
-                        </li>
-                        
-                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
-                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents14">
-
-                                                   <span class="nav-link-text">MAD, MAL, MUS, MDL</span>
-                                                   </a>
-
-                                <ul class="sidenav-third-level collapse " id="collapseComponents14">
-                <li>
-                  <a href="../Classes/MEMModel.html">Model</a>
-                </li>
-                <li>
-                  <a href="../Classes/MAD.html">MAD</a>
-                </li>
-                <li>
-                  <a href="../Classes/MAL.html">MAL</a>
-                </li>
-                <li>
-                  <a href="../Classes/MUS.html">MUS</a>
-                </li>
-                <li>
-                  <a href="../Classes/MDL.html">MDL</a>
-                </li>
-                <li>
-                  <a href="../Classes/relation.html">Relation to CWEs</a>
-                </li>
-              </ul>
-                              </li>
-
-
-
-                        <li class="nav-item" data-toggle="tooltip" data-placement="right"><a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents26"><span class="nav-link-text">PRN, TRN</span></a><ul class="sidenav-third-level collapse " id="collapseComponents26">
-                              <li><a href="../Classes/RNModel.html">Model</a></li>
-                              <li><a href="../Classes/PRN.html">PRN</a></li>
-                              <li><a href="../Classes/TRN.html">TRN</a></li>
-                           </ul>
-                        </li>
-
-
-                        </ul>
-                     </li>
-
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Examples">
-                  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                     <i class="fa fa-fw fa-star"></i>
-                     <span class="nav-link-text">Examples</span>
-                     </a>
-
-                  <ul class="sidenav-second-level collapse" id="collapseComponents">
-
-
-                     
-                     <li class="nav-item" data-toggle="tooltip" data-placement="right"><a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents16"><span class="nav-link-text">
-                              <fontL>ATN, ATZ</fontL></span></a><ul class="sidenav-third-level collapse " id="collapseComponents16">
-                           <li><a href="../Examples/ATN.html">
-                                 <fontL>ATN</fontL></a></li>
-                           <li><a href="../Examples/ATZ.html">
-                                 <fontL>ATZ</fontL></a></li>
-                        </ul>
-                     </li>
-
-                     
-                     
-                     <li class="nav-item" data-toggle="tooltip" data-placement="right"><a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents8"><span class="nav-link-text">ENC, KMN, VRF</span></a><ul class="sidenav-third-level collapse " id="collapseComponents8">
-                           <li><a href="../Examples/ENC.html">ENC</a></li>
-                           <li><a href="../Examples/KMN.html">KMN</a></li>
-                           <li><a href="../Examples/VRF.html">VRF</a></li>
-                        </ul>
-                     </li>
-                     <li><a href="../Examples/IEX.html">IEX</a></li>
-                     
-
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
-              <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents17">
-
-                                 <span class="nav-link-text">MAD, MAL, MUS, MDL</span>
-                                 </a>
-
-              <ul class="sidenav-third-level collapse " id="collapseComponents17">
-
-                <li>
-                  <a href="../Examples/MAD.html">MAD</a>
-                </li>
-                <li>
-                  <a href="../Examples/MAL.html">MAL</a>
-                </li>
-                <li>
-                  <a href="../Examples/MUS.html">MUS</a>
-                </li>
-                <li>
-                  <a href="../Examples/MDL.html">MDL</a>
-                </li>
-
-              </ul>
-            </li>
-                     <li class="nav-item" data-toggle="tooltip" data-placement="right"><a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents19"><span class="nav-link-text">PRN, TRN</span></a><ul class="sidenav-third-level collapse " id="collapseComponents19">
-                           <li><a href="../Examples/PRN.html">PRN</a></li>
-                           <li><a href="../Examples/TRN.html">TRN</a></li>
-                        </ul>
-                     </li>
-
-
-                     </ul>
-                  </li>
-
-
-
-                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Old">
-                     <a class="nav-link nav-link-collapse " data-toggle="collapse" href="#collapseComponents35" data-parent="#exampleAccordion">
-                        <i class="fa fa-fw fa-star"></i>
-                        <span class="nav-link-text">Deprecated</span>
-                        </a>
-
-                     <ul class="sidenav-second-level collapse show" id="collapseComponents35">
-
-
-
-
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
-                 <a class="nav-link nav-link-collapse " data-toggle="collapse" href="#collapseComponents36">
-
-                                    <span class="nav-link-text">Classes</span>
-                                    </a>
-
-                 <ul class="sidenav-third-level collapse show" id="collapseComponents36">
-                  <li>
-                     <a href="ARCClass.html">ARC</a>
-                  </li>
-                   <li>
-                     <a href="BOFClass.html">BOF</a>
-                   </li>
-                   <li class= "active">
-                     <a href="CIFClass.html">CIF</a>
-                   </li>
-                   <li>
-                     <a href="INJClass.html">INJ</a>
-                   </li>
-
-                 </ul>
-               </li>
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
-                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents37">
-
-                                    <span class="nav-link-text">Examples</span>
-                                    </a>
-
-                 <ul class="sidenav-third-level collapse " id="collapseComponents37">
-
-                   <li>
-                     <a href="BOFExample.html">BOF</a>
-                   </li>
-                   <li>
-                     <a href="CIFExample.html">CIF</a>
-                   </li>
-                   <li>
-                     <a href="INJExample.html">INJ</a>
-                   </li>
-
-                 </ul>
-               </li>
-
-
-                        </ul>
-                     </li>
-
-
-               
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Enlightenment">
-                  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents4" data-parent="#exampleAccordion">
-                     <i class="fa fa-fw fa-lightbulb-o"></i>
-                     <span class="nav-link-text">Enlightenment</span>
-                     </a>
-
-                  <ul class="sidenav-second-level collapse" id="collapseComponents4">
-
-                     <li>
-                        <a href="../Background/index.html">Background</a>
-                        </li>
-
-                     
-
-                     <li>
-                        <a href="../Enlightenment/otherclassifications.html">Other Classifications</a>
-                        </li>
-
-                     </ul>
-                  </li>
-
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Publications">
-                  <a class="nav-link" href="../Publications/index.html">
-                     <i class="fa fa-fw fa-book"></i>
-                     <span class="nav-link-text">Publications</span>
-                     </a>
-                  </li>
-
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Team">
-                  <a class="nav-link" href="../Team/index.html">
-                     <i class="fa fa-fw fa-users"></i>
-                     <span class="nav-link-text">Team</span>
-                     </a>
-                  </li>
-
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contact">
-                  <a class="nav-link" href="../Home/Contact Info.html">
-                     <i class="fa fa-fw fa-user-plus"></i>
-                     <span class="nav-link-text">Contact Us</span>
-                     </a>
-                  </li>
-
-               </ul>
-
-            <ul class="navbar-nav sidenav-toggler">
-
-               <li class="nav-item">
-                  <a class="nav-link text-center" id="sidenavToggler">
-                     <i class="fa fa-fw fa-angle-left"></i>
-                     </a>
-                  </li>
-               </ul>
-
-            <form class="form-inline my-2 my-md-0 mobile mobile2" action="../search.html">
-               <input class="form-control mr-sm-2 tipue_search_input" type="text" placeholder="Search" name="q" id="tipue_search_input">
-               <button class="btn btn-outline-success my-2 my-sm-0 enableOnInput" type="submit" disabled>Search</button>
-               </form>
-            </div>
-         </nav>
-
-
-      <div class="content-wrapper">
-
-         <div class="container-fluid" align="center">
-
-            <fontST>Control of Interaction Frequency Bugs (CIF) Class</fontST>
-            </div>
-
-         <div class="container-fluid" align="left">
-
-
-
-
-
-
-
-
-
-            <p>
-               <FontS>Definition</FontS>
-            </p>
-            <ul>We define Control of Interaction Frequency Bugs (CIF) as:</ul>
-            <ul><span class="text-primary"><i>The software does not properly limit the number of repeating interactions per specified
-                     unit.</i></span></ul>
-            <ul>In physics, frequency is the number of occurrences of a repeating event per unit time.
-               Interactions in software could be also per event or per user. </ul>
-            <p>
-               <FontS>Type</FontS>
-            </p>
-            <ul>High (semantic).</ul>
-            <p>
-               <FontS>Taxonomy</FontS>
-            </p>
-            <ul>Fig. 1 depicts CIF causes, attributes and consequences. </ul>
-            <ul><span class="text-primary"></span></ul>
-            <div align="center">
-               <p><a target="_blank" href="images/CIFModelv4.png"><img class="img-fluid" src="images/CIFModelv4.png"></a></p>
-               <p><em>Fig 1.
-
-                     Control of Interaction Frequency Bugs (CIF) Class<span class="text-info">
-                        - click on image for detailed view</span>.</em></p>
-            </div>
-            <p>
-               <FontS>Attributes</FontS>
-            </p>
-            <ul><u><b>Interaction</b></u> --  Authentication Attempt, Book, Checkout, Register, Initiate. </ul>
-            <ul>This indicates the type of interactions to be controlled. Voting could be related
-               to election, census, survey, referendum and ballot. Booking could be of tickets, hotel
-               rooms or rental cars. Checkout could be of library books, hotel rooms or rental cars.
-               Register could be for computer games. Initiate could be for message exchange.</ul>
-            <ul>Authentication Event is the sequence of<i> Authentication Attempts</i> arriving at a particular server, possibly with the same partial credential, from
-               any source, that terminates by successful authentication or by blocking.</ul>
-            <ul><u><b>Number</b></u> – Single, Unique; Specified Number (&gt; 1). </ul>
-            <ul>This indicates the maximum number of occurrences allowed.</ul>
-            <ul><u><b>Unit</b></u> – Time Interval, Event, User. </ul>
-            <ul>This indicates the specific unit per which the number of occurrences is controlled.
-               Time Interval could be in seconds, in days, etc. Event could be election, authentication,
-               on-line transaction to move funds, etc.</ul>
-            <ul><b>Actor</b> – User, Part of Program Logic, Automated Process. </ul>
-            <ul>This indicates who/what is performing the repeating interactions. User could be authenticated
-               user, attacker. Part of program logic could be message exchange. Automated process
-               could be virus, bot.</ul>
-            <ul><i>Our taxonomy makes it abundantly clear that CIF is a "metaclass" in some senses. External
-                  policies must define for each system or application what constitutes an interaction,
-                  how many interactions should be allowed, and the unit. Each policy, then, defines
-                  a different class of CIF concerns.</i></ul>
-            <p>
-               <FontS>Causes</FontS>
-            </p>
-            <ul>The graph of causes shows that there are two main causes: <i>Number of Interactions not Checked Properly</i> or <i>Frequency of Interactions not Checked Properly</i>.</ul>
-            <p>
-               <FontS>Consequences</FontS>
-            </p>
-            <ul>The graph of consequences shows what could happen due to the fault. Note that in the
-               graph of consequences, <i>Credentials</i> concerns username or password, smart card and personal identification number (PIN),
-               retina, iris, fingerprint, etc. <i>Resource Exhaustion</i> concerns memory, CPU or granted licenses. </ul>
-            <p>
-               <FontS>Sites</FontS>
-            </p>
-            <ul>Since the concept of interaction is so broad and high level, compared to most programming
-               languages, no general description of what is a site is feasible. Each system or application
-               must define its own concept of interaction. An interaction must then be mapped to
-               some code that controls or authorizes said interactions. More importantly, since a
-               failure may be the total lack of code to recognize and control frequency of interaction,
-               there is often no particular line or even block of code that can be pointed out as
-               missing the control code. An entire path may be indicated from the beginning of an
-               interaction event, that is, an outside agent indicates desire to start an interaction,
-               to the final chance in execution flow that code may refuse to authorize the event.</ul>
-            <p>
-               <FontS>Related BF Classes</FontS>
-            </p>
-            <ul>BF classes related to CIF are: IEX, ATN.</ul>
-            <p>
-               <FontS>Related CWEs and SFP</FontS>
-            </p>
-            <ul>CWEs related to CIF are <a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>, <a href="https://cwe.mitre.org/data/definitions/799.html" target="_blank">CWE-799</a>, <a href="https://cwe.mitre.org/data/definitions/837.html" target="_blank">CWE-837</a>.</ul>
-            <ul>The only related SFP cluster is <a href="https://apps.dtic.mil/docs/citations/ADB381215" target="_blank">SFP34 Unrestricted Authentication under the Primary Cluster: Authentication</a>.</ul>
-            <ul>BF Descriptions of CIF Related CWEs are provided <a href="https://docs.google.com/document/d/1MPE8TJC0u5mWzX1WQtf3FJII1D_eSAKyf5ndJFLJbQM/edit" target="_blank">here</a>.</ul>
-            <p>
-               <FontS>Application</FontS>
-            </p>
-            <ul>Application examples are provided <a href="https://samate.nist.gov/BF/Examples/CIF.html" target="_blank">here</a>.</ul>
-            <p>
-               <FontS>References</FontS>
-            </p>
-            <ul><small><a name="1">[1]
-
-                     I. Bojanova, P. E. Black, Y. Yesha, and Y. Wu, “The Bugs Framework (BF): A Structured
-                     approach to express bugs”, Proceedings of IEEE International Conference on Software
-                     Quality, Reliability and Security (QRS), 2016, , pp. 175-182.</a></small></ul>
-
-
-
-            </div>
-
-
-         <footer class="sticky-footer">
-
-            <div class="container">
-
-               <div class="text-center">
-                  <small>
-
-                     <p style="top: 9px; position:relative;" class="">
-                        <a href="https://www.nist.gov/disclaimer">Disclaimer Notice</a>
-                        &amp;
-                        <a href="https://www.nist.gov/privacy-policy">
-                           Privacy Statement / Security Notice</a>
-                        <br>
-                        <a href="https://www.nist.gov/">NIST</a>
-                        is an Agency of the
-                        <a href="https://www.commerce.gov/">U.S. Dept. of Commerce</a>
-                        </p>
-                     </small>
-                  </div>
-               </div>
-            </footer>
-         <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fa fa-angle-up"></i>
-            </a>
-         <script src="../vendor/jquery/jquery.min.js"></script>
-         <script src="../vendor/popper/popper.min.js"></script>
-         <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-         <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-         <script src="../js/custom.js"></script>
-
-
+<!DOCTYPE html>
+<html xmlns:output="http://www.w3.org/2010/xslt-xquery-serialization"
+   xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <title>CIF</title>
+   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto|Source%20Code%20Pro" rel="stylesheet" type="text/css">
+   <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body xml:space="preserve" class="fixed-nav sticky-footer bg-lightt" id="page-top">
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-lightt fixed-top" id="mainNav">
+
+
+      <div class="collapse navbar-collapse" id="navbarsExampleContainer">
+
+         <div class="mr-auto">
+            <img class="" src="../images/nist.png">
+            <img class="" src="../images/samate.png">
+
+
+            <fontTT>The Bugs Framework (BF)
+               <span class="remove">-</span>
+            </fontTT>
+
+            <fontSS>
+               <span class="remove">
+
+                  <red>Software developers' and testers' "Best Friend"</red>
+               </span>
+            </fontSS>
          </div>
-      </body>
+
+         <form class="form-inline my-2 my-md-0" action="../search.html">
+            <input class="form-control mr-sm-2 tipue_search_input" type="text" placeholder="Search" name="q"
+               id="tipue_search_input">
+            <button class="btn btn-outline-success my-2 my-sm-0 enableOnInput" type="submit" disabled>Search</button>
+         </form>
+      </div>
+   </nav>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+
+      <div class="mobile ">
+         <img class="img-fluid" src="../images/nist.png">
+         <img class="img-fluid" src="../images/samate.png">
+
+      </div>
+      <span class="ml-auto mobile">
+
+         <fontTT>The Bugs Framework (BF)</fontTT>
+      </span>
+      <span class="mr-auto mobile2">
+
+         <fontTT>The Bugs Framework</fontTT>
+      </span>
+      <button class="navbar-toggler navbar-toggler-right ml-auto" type="button" data-toggle="collapse"
+         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+         aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Home">
+               <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2"
+                  data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-home"></i>
+                  <span class="nav-link-text">BF Home</span>
+               </a>
+
+               <ul class="sidenav-second-level collapse" id="collapseComponents2">
+
+                  <li>
+                     <a href="../Home/Terminology.html">Terminology</a>
+                  </li>
+                  <li>
+                     <a href="../Home/Why.html">Why BF?</a>
+                  </li>
+                  <li>
+                     <a href="../index.html">Overview</a>
+                  </li>
+                  <li>
+                     <a href="../Home/Approach.html">Approach</a>
+                  </li>
+                  <li>
+                     <a href="../Home/Methodology.html">Methodology</a>
+                  </li>
+                  <li>
+                     <a href="../Home/Impacts.html">Potential Impacts</a>
+                  </li>
+
+               </ul>
+            </li>
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Classes">
+               <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents3"
+                  data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-table"></i>
+                  <span class="nav-link-text">Classes</span>
+               </a>
+
+               <ul class="sidenav-second-level collapse " id="collapseComponents3">
+
+
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right"><a
+                        class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents21"><span class="nav-link-text">
+                           <fontL>ATN, AUT</fontL>
+                        </span></a>
+                     <ul class="sidenav-third-level collapse " id="collapseComponents21">
+                        <li><a href="../Classes/ATN.html">
+                              <fontL>ATN</fontL>
+                           </a></li>
+                        <li><a href="../Classes/AUT.html">
+                              <fontL>AUT</fontL>
+                           </a></li>
+                     </ul>
+                  </li>
+
+
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right"><a
+                        class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents24"><span class="nav-link-text">ENC, KMN, VRF</span></a>
+                     <ul class="sidenav-third-level collapse " id="collapseComponents24">
+                        <li><a href="../Classes/CRY.html">Model</a></li>
+                        <li><a href="../Classes/ENC.html">ENC</a></li>
+                        <li><a href="../Classes/KMN.html">KMN</a></li>
+                        <li><a href="../Classes/VRF.html">VRF</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right"><a
+                        class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents25"><span class="nav-link-text">IEX</span></a>
+                     <ul class="sidenav-third-level collapse " id="collapseComponents25">
+                        <li><a href="../Classes/IEXModel.html">Model</a></li>
+                        <li><a href="../Classes/IEX.html">IEX</a></li>
+                     </ul>
+                  </li>
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents14">
+
+                        <span class="nav-link-text">MAD, MAL, MUS, MDL</span>
+                     </a>
+
+                     <ul class="sidenav-third-level collapse " id="collapseComponents14">
+                        <li>
+                           <a href="../Classes/MEMModel.html">Model</a>
+                        </li>
+                        <li>
+                           <a href="../Classes/MAD.html">MAD</a>
+                        </li>
+                        <li>
+                           <a href="../Classes/MAL.html">MAL</a>
+                        </li>
+                        <li>
+                           <a href="../Classes/MUS.html">MUS</a>
+                        </li>
+                        <li>
+                           <a href="../Classes/MDL.html">MDL</a>
+                        </li>
+                        <li>
+                           <a href="../Classes/relation.html">Relation to CWEs</a>
+                        </li>
+                     </ul>
+                  </li>
+
+
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right"><a
+                        class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents26"><span class="nav-link-text">PRN, TRN</span></a>
+                     <ul class="sidenav-third-level collapse " id="collapseComponents26">
+                        <li><a href="../Classes/RNModel.html">Model</a></li>
+                        <li><a href="../Classes/PRN.html">PRN</a></li>
+                        <li><a href="../Classes/TRN.html">TRN</a></li>
+                     </ul>
+                  </li>
+
+
+               </ul>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Examples">
+               <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                  data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-star"></i>
+                  <span class="nav-link-text">Examples</span>
+               </a>
+
+               <ul class="sidenav-second-level collapse" id="collapseComponents">
+
+
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right"><a
+                        class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents16"><span class="nav-link-text">
+                           <fontL>ATN, ATZ</fontL>
+                        </span></a>
+                     <ul class="sidenav-third-level collapse " id="collapseComponents16">
+                        <li><a href="../Examples/ATN.html">
+                              <fontL>ATN</fontL>
+                           </a></li>
+                        <li><a href="../Examples/ATZ.html">
+                              <fontL>ATZ</fontL>
+                           </a></li>
+                     </ul>
+                  </li>
+
+
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right"><a
+                        class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents8"><span class="nav-link-text">ENC, KMN, VRF</span></a>
+                     <ul class="sidenav-third-level collapse " id="collapseComponents8">
+                        <li><a href="../Examples/ENC.html">ENC</a></li>
+                        <li><a href="../Examples/KMN.html">KMN</a></li>
+                        <li><a href="../Examples/VRF.html">VRF</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="../Examples/IEX.html">IEX</a></li>
+
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents17">
+
+                        <span class="nav-link-text">MAD, MAL, MUS, MDL</span>
+                     </a>
+
+                     <ul class="sidenav-third-level collapse " id="collapseComponents17">
+
+                        <li>
+                           <a href="../Examples/MAD.html">MAD</a>
+                        </li>
+                        <li>
+                           <a href="../Examples/MAL.html">MAL</a>
+                        </li>
+                        <li>
+                           <a href="../Examples/MUS.html">MUS</a>
+                        </li>
+                        <li>
+                           <a href="../Examples/MDL.html">MDL</a>
+                        </li>
+
+                     </ul>
+                  </li>
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right"><a
+                        class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents19"><span class="nav-link-text">PRN, TRN</span></a>
+                     <ul class="sidenav-third-level collapse " id="collapseComponents19">
+                        <li><a href="../Examples/PRN.html">PRN</a></li>
+                        <li><a href="../Examples/TRN.html">TRN</a></li>
+                     </ul>
+                  </li>
+
+
+               </ul>
+            </li>
+
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Old">
+               <a class="nav-link nav-link-collapse " data-toggle="collapse" href="#collapseComponents35"
+                  data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-star"></i>
+                  <span class="nav-link-text">Deprecated</span>
+               </a>
+
+               <ul class="sidenav-second-level collapse show" id="collapseComponents35">
+
+
+
+
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                     <a class="nav-link nav-link-collapse " data-toggle="collapse" href="#collapseComponents36">
+
+                        <span class="nav-link-text">Classes</span>
+                     </a>
+
+                     <ul class="sidenav-third-level collapse show" id="collapseComponents36">
+                        <li>
+                           <a href="ARCClass.html">ARC</a>
+                        </li>
+                        <li>
+                           <a href="BOFClass.html">BOF</a>
+                        </li>
+                        <li class="active">
+                           <a href="CIFClass.html">CIF</a>
+                        </li>
+                        <li>
+                           <a href="INJClass.html">INJ</a>
+                        </li>
+
+                     </ul>
+                  </li>
+                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+                        href="#collapseComponents37">
+
+                        <span class="nav-link-text">Examples</span>
+                     </a>
+
+                     <ul class="sidenav-third-level collapse " id="collapseComponents37">
+
+                        <li>
+                           <a href="BOFExample.html">BOF</a>
+                        </li>
+                        <li>
+                           <a href="CIFExample.html">CIF</a>
+                        </li>
+                        <li>
+                           <a href="INJExample.html">INJ</a>
+                        </li>
+
+                     </ul>
+                  </li>
+
+
+               </ul>
+            </li>
+
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Enlightenment">
+               <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents4"
+                  data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-lightbulb-o"></i>
+                  <span class="nav-link-text">Enlightenment</span>
+               </a>
+
+               <ul class="sidenav-second-level collapse" id="collapseComponents4">
+
+                  <li>
+                     <a href="../Background/index.html">Background</a>
+                  </li>
+
+
+
+                  <li>
+                     <a href="../Enlightenment/otherclassifications.html">Other Classifications</a>
+                  </li>
+
+               </ul>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Publications">
+               <a class="nav-link" href="../Publications/index.html">
+                  <i class="fa fa-fw fa-book"></i>
+                  <span class="nav-link-text">Publications</span>
+               </a>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Team">
+               <a class="nav-link" href="../Team/index.html">
+                  <i class="fa fa-fw fa-users"></i>
+                  <span class="nav-link-text">Team</span>
+               </a>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contact">
+               <a class="nav-link" href="../Home/Contact Info.html">
+                  <i class="fa fa-fw fa-user-plus"></i>
+                  <span class="nav-link-text">Contact Us</span>
+               </a>
+            </li>
+
+         </ul>
+
+         <ul class="navbar-nav sidenav-toggler">
+
+            <li class="nav-item">
+               <a class="nav-link text-center" id="sidenavToggler">
+                  <i class="fa fa-fw fa-angle-left"></i>
+               </a>
+            </li>
+         </ul>
+
+         <form class="form-inline my-2 my-md-0 mobile mobile2" action="../search.html">
+            <input class="form-control mr-sm-2 tipue_search_input" type="text" placeholder="Search" name="q"
+               id="tipue_search_input">
+            <button class="btn btn-outline-success my-2 my-sm-0 enableOnInput" type="submit" disabled>Search</button>
+         </form>
+      </div>
+   </nav>
+
+
+   <div class="content-wrapper">
+
+      <div class="container-fluid" align="center">
+
+         <fontST>Control of Interaction Frequency Bugs (CIF) Class</fontST>
+      </div>
+
+      <div class="container-fluid" align="left">
+
+
+
+
+
+
+
+
+
+         <p>
+            <FontS>Definition</FontS>
+         </p>
+         <ul>We define Control of Interaction Frequency Bugs (CIF) as:</ul>
+         <ul><span class="text-primary"><i>The software does not properly limit the number of repeating interactions per
+                  specified
+                  unit.</i></span></ul>
+         <ul>In physics, frequency is the number of occurrences of a repeating event per unit time.
+            Interactions in software could be also per event or per user. </ul>
+         <p>
+            <FontS>Type</FontS>
+         </p>
+         <ul>High (semantic).</ul>
+         <p>
+            <FontS>Taxonomy</FontS>
+         </p>
+         <ul>Fig. 1 depicts CIF causes, attributes and consequences. </ul>
+         <ul><span class="text-primary"></span></ul>
+         <div align="center">
+            <p><a target="_blank" href="images/CIFModelv4.png"><img class="img-fluid" src="images/CIFModelv4.png"></a>
+            </p>
+            <p><em>Fig 1.
+
+                  Control of Interaction Frequency Bugs (CIF) Class<span class="text-info">
+                     - click on image for detailed view</span>.</em></p>
+         </div>
+         <p>
+            <FontS>Attributes</FontS>
+         </p>
+         <ul><u><b>Interaction</b></u> -- Authentication Attempt, Book, Checkout, Register, Initiate. </ul>
+         <ul>This indicates the type of interactions to be controlled. Voting could be related
+            to election, census, survey, referendum and ballot. Booking could be of tickets, hotel
+            rooms or rental cars. Checkout could be of library books, hotel rooms or rental cars.
+            Register could be for computer games. Initiate could be for message exchange.</ul>
+         <ul>Authentication Event is the sequence of<i> Authentication Attempts</i> arriving at a particular server,
+            possibly with the same partial credential, from
+            any source, that terminates by successful authentication or by blocking.</ul>
+         <ul><u><b>Number</b></u> – Single, Unique; Specified Number (&gt; 1). </ul>
+         <ul>This indicates the maximum number of occurrences allowed.</ul>
+         <ul><u><b>Unit</b></u> – Time Interval, Event, User. </ul>
+         <ul>This indicates the specific unit per which the number of occurrences is controlled.
+            Time Interval could be in seconds, in days, etc. Event could be election, authentication,
+            on-line transaction to move funds, etc.</ul>
+         <ul><b>Actor</b> – User, Part of Program Logic, Automated Process. </ul>
+         <ul>This indicates who/what is performing the repeating interactions. User could be authenticated
+            user, attacker. Part of program logic could be message exchange. Automated process
+            could be virus, bot.</ul>
+         <ul><i>Our taxonomy makes it abundantly clear that CIF is a "metaclass" in some senses. External
+               policies must define for each system or application what constitutes an interaction,
+               how many interactions should be allowed, and the unit. Each policy, then, defines
+               a different class of CIF concerns.</i></ul>
+         <p>
+            <FontS>Causes</FontS>
+         </p>
+         <ul>The graph of causes shows that there are two main causes: <i>Number of Interactions not Checked
+               Properly</i> or <i>Frequency of Interactions not Checked Properly</i>.</ul>
+         <p>
+            <FontS>Consequences</FontS>
+         </p>
+         <ul>The graph of consequences shows what could happen due to the fault. Note that in the
+            graph of consequences, <i>Credentials</i> concerns username or password, smart card and personal
+            identification number (PIN),
+            retina, iris, fingerprint, etc. <i>Resource Exhaustion</i> concerns memory, CPU or granted licenses. </ul>
+         <p>
+            <FontS>Sites</FontS>
+         </p>
+         <ul>Since the concept of interaction is so broad and high level, compared to most programming
+            languages, no general description of what is a site is feasible. Each system or application
+            must define its own concept of interaction. An interaction must then be mapped to
+            some code that controls or authorizes said interactions. More importantly, since a
+            failure may be the total lack of code to recognize and control frequency of interaction,
+            there is often no particular line or even block of code that can be pointed out as
+            missing the control code. An entire path may be indicated from the beginning of an
+            interaction event, that is, an outside agent indicates desire to start an interaction,
+            to the final chance in execution flow that code may refuse to authorize the event.</ul>
+         <p>
+            <FontS>Related BF Classes</FontS>
+         </p>
+         <ul>BF classes related to CIF are: IEX, ATN.</ul>
+         <p>
+            <FontS>Related CWEs and SFP</FontS>
+         </p>
+         <ul>CWEs related to CIF are <a href="https://cwe.mitre.org/data/definitions/307.html"
+               target="_blank">CWE-307</a>, <a href="https://cwe.mitre.org/data/definitions/799.html"
+               target="_blank">CWE-799</a>, <a href="https://cwe.mitre.org/data/definitions/837.html"
+               target="_blank">CWE-837</a>.</ul>
+         <ul>The only related SFP cluster is <a href="https://apps.dtic.mil/docs/citations/ADB381215"
+               target="_blank">SFP34 Unrestricted Authentication under the Primary Cluster: Authentication</a>.</ul>
+         <ul>BF Descriptions of CIF Related CWEs are provided <a
+               href="https://docs.google.com/document/d/1MPE8TJC0u5mWzX1WQtf3FJII1D_eSAKyf5ndJFLJbQM/edit"
+               target="_blank">here</a>.</ul>
+         <p>
+            <FontS>Application</FontS>
+         </p>
+         <ul>Application examples are provided <a href="https://samate.nist.gov/BF/Examples/CIF.html"
+               target="_blank">here</a>.</ul>
+         <p>
+            <FontS>References</FontS>
+         </p>
+         <ul><small><a name="1">[1]
+
+                  I. Bojanova, P. E. Black, Y. Yesha, and Y. Wu, “The Bugs Framework (BF): A Structured
+                  approach to express bugs”, Proceedings of IEEE International Conference on Software
+                  Quality, Reliability and Security (QRS), 2016, , pp. 175-182.</a></small></ul>
+
+
+
+      </div>
+
+
+      <footer class="sticky-footer">
+
+         <div class="container">
+
+            <div class="text-center">
+               <small>
+
+                  <p style="top: 9px; position:relative;" class="">
+                     <a href="https://www.nist.gov/disclaimer">Disclaimer Notice</a>
+                     &amp;
+                     <a href="https://www.nist.gov/privacy-policy">
+                        Privacy Statement / Security Notice</a>
+                     <br>
+                     <a href="https://www.nist.gov/">NIST</a>
+                     is an Agency of the
+                     <a href="https://www.commerce.gov/">U.S. Dept. of Commerce</a>
+                  </p>
+               </small>
+            </div>
+         </div>
+      </footer>
+      <a class="scroll-to-top rounded" href="#page-top">
+         <i class="fa fa-angle-up"></i>
+      </a>
+      <script src="../vendor/jquery/jquery.min.js"></script>
+      <script src="../vendor/popper/popper.min.js"></script>
+      <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+      <script src="../js/custom.js"></script>
+
+
+   </div>
+</body>
+
 </html>
