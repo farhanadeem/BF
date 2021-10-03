@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Memory Deallocation Bugs (MDL) Class</title>
+  <title>Data Validation (DVL) Class</title>
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Source%20Code%20Pro" rel="stylesheet" type="text/css">
@@ -192,12 +192,12 @@
 
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
-              <a class="nav-link nav-link-collapse " data-toggle="collapse" href="#collapseComponents14">
+              <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents14">
 
                 <span class="nav-link-text">MAD, MAL, MUS, MDL</span>
               </a>
 
-              <ul class="sidenav-third-level collapse show" id="collapseComponents14">
+              <ul class="sidenav-third-level collapse" id="collapseComponents14">
                 <li>
                   <a href="MEMModel.html">Model</a>
                 </li>
@@ -210,7 +210,7 @@
                 <li>
                   <a href="MUS.html">MUS</a>
                 </li>
-                <li class="active">
+                <li>
                   <a href="MDL.html">MDL</a>
                 </li>
                 <li>
@@ -386,6 +386,7 @@
           </ul>
         </li>
 
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Old">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents35"
             data-parent="#exampleAccordion">
@@ -455,10 +456,10 @@
           </a>
 
           <ul class="sidenav-second-level collapse" id="collapseComponents4">
-
             <li>
               <a href="../Background/index.html">Background</a>
             </li>
+
 
             <li>
               <a href="../Enlightenment/otherclassifications.html">Other Classifications</a>
@@ -509,33 +510,27 @@
 
     <div class="container-fluid" align="center">
 
-      <fontST>Memory Deallocation Bugs (MDL) Class</fontST>
+      <fontST>Data Validation (DVL) Class</fontST>
     </div>
 
     <div class="container-fluid" align="left">
-
-
       <p>
         <FontS>Definition</FontS>
       </p>
-      <ul>We define Memory Deallocation Bugs (MDL) as follows:</ul>
-      <ul><span class="text-primary"><i>An object is dealocated, reduced, or reallocated (while reducing)
-            improperly.</i></span></ul>
+      <ul>We define Data Validation Bugs (DVL) as follows:</ul>
+      <ul><span class="text-primary"><i>Data are validated (syntax check) or sanitized (escape, filter, repair) improperly.</i></span></ul>
 
-      <!--<p>
-                          <FontS>Type</FontS>
-                       </p>
-                       <ul>High (semantic).</ul>-->
+      
       <p>
         <FontS>Taxonomy</FontS>
       </p>
-      <ul>Fig. 1 depicts MDL causes, attributes and consequences. </ul>
+      <ul>Fig. 1 depicts DVL causes, attributes and consequences. </ul>
       <ul></ul>
       <div align="center">
-        <p><a target="_blank" href="images/MDL.png"><img class="img-fluid col-md-6" src="images/MDL.png"></a></p>
+        <p><a target="_blank" href="images/DVL.png"><img class="img-fluid col-md-6" src="images/DVL.png"></a></p>
         <p><em>Fig 1.
 
-            Memory Deallocation Bugs (MDL) Class<span class="text-info">
+            Data Validation Bugs (DVL) Class<span class="text-info">
               - click on image for detailed view</span>.</em></p>
       </div>
 
@@ -543,7 +538,7 @@
         <FontS>Operations</FontS>
       </p>
       <ul>
-        The MDL operations are: Deallocate, Reduce, Reallocate–Reduce. They reflect improper release of an object.</ul>
+        The DVL operations are: Validate and Sanitize. They reflect the improper check and modification of data syntax.</ul>
       <ul>
         <table class="table">
           <thead>
@@ -553,57 +548,67 @@
             </tr>
           </thead>
           <tr>
-            <td>Deallocate</td>
-            <td>Releases the allocated memory of an object.</td>
+            <td>Validate</td>
+            <td>Check data syntax (proper form/grammar) in order to accept (and possibly sanitize) or reject it. Includes checking for missing symbols/elements.</td>
           </tr>
           <tr>
-            <td>Reduce</td>
-            <td>Deallocates part of the object memory; redefines its bound- aries and size.</td>
+            <td>Sanitize</td>
+            <td>Modify data (neutralize/escape, filter/remove, repair/add symbols) in order to make it valid (well-formed).</td>
           </tr>
-          <tr>
-            <td>Reallocate–Reduce</td>
-            <td>Allocates a new smaller space in memory for an object at a new address, copies part of the object
-              content there, reassigns the pointer, and deallocates the previous piece of memory.</td>
-          </tr>
+          
 
         </table>
       </ul>
       <p>
         <FontS>Causes</FontS>
       </p>
-      <ul>The graph of causes shows that there are three main causes for Memory Deallocation bugs: Improper Operation,
-        Improper Pointer, and Improper Object.</ul>
+      <ul>The graph of causes shows that there are three main causes for data validation bugs: Improper Operation,
+        Improper Data, and Improper Policy.</ul>
       <ul>
         <table class="table">
           <thead class="thead-light">
             <tr>
-              <th colspan="2">Improper Operation</th>
+              <th colspan="3">Improper Operation</th>
             </tr>
           </thead>
           <thead>
             <tr>
               <th class="w-25">Value</th>
               <th>Definition</th>
+              <th>Example</th>
             </tr>
           </thead>
           <tr>
             <td>Missing</td>
             <td>The operation is absent.</td>
+            <td>Missing data sanitization.</td>
           </tr>
-          <tr>
-            <td>Mismatched</td>
-            <td>The deallocation function does not match the allocation function used for the same object.</td>
-          </tr>
+          
           <tr>
             <td>Erroneous</td>
-            <td>There is a bug in the implementation of the operation.</td>
+            <td>There is a bug in the implementation of the operation (incl. how it checks against a policy).</td>
+            <td><li>Using not equal to (!=) when
+                comparing to safelist values.</li>
+                <li>Using greater than (>) when
+                    checking for upper range.</li></td>
           </tr>
-
+          <tr>
+            <td>Under-Restrictive Policy</td>
+            <td>Accepts bad data.</td>
+            <td><li>Permissive safelist or regular
+                expression.</li>
+            <li>Incomplete denylist.</li></td>
+          </tr>
+          <tr>
+            <td>Over-Restrictive Policy</td>
+            <td>Rejects good data.</td>
+            <td>Over-restrictive denylist or regu- lar expression.</td>
+          </tr>
         </table>
         <table class="table">
           <thead class="thead-light">
             <tr>
-              <th colspan="2">Improper Pointer</th>
+              <th colspan="2">Improper Data</th>
             </tr>
           </thead>
           <thead>
@@ -613,32 +618,20 @@
             </tr>
           </thead>
           <tr>
-            <td>Wild Pointer</td>
-            <td>Points to an arbitrary address, because it has not been initialized or an erroneous allocation routine
-              is used.</td>
+            <td>Corrupted Data</td>
+            <td>Unintentionally modified data due to a previous weakness (e.g., with a decompress or a decrypt operation) that if not sanitized would end-up as invalid data for next weakness.</td>
           </tr>
           <tr>
-            <td>Dangling Pointer</td>
-            <td>Still points to the address of its successfully deallo- cated object.</td>
+            <td>Tampered Data</td>
+            <td>Maliciously modified data due to a previous weakness (e.g., with a deserialize, authorize, or crypto verify operation) that would lead to injection error.</td>
           </tr>
-          <tr>
-            <td>Wrong Position</td>
-            <td>Points to a miscalculated position inside object bounds.</td>
-          </tr>
-          <tr>
-            <td>Hardcoded Address</td>
-            <td>The pointer points a wrong specific address.</td>
-          </tr>
-          <tr>
-            <td>Forbidden Address</td>
-            <td>The pointer points to an OS protected or non-existing address.</td>
-          </tr>
+          
 
         </table>
         <table class="table">
           <thead class="thead-light">
             <tr>
-              <th colspan="2">Improper Object</th>
+              <th colspan="2">Improper Policy</th>
             </tr>
           </thead>
           <thead>
@@ -648,26 +641,24 @@
             </tr>
           </thead>
           <tr>
-            <td>Wrong Size Used</td>
-            <td>The value used as size does not match the real size of the object.</td>
+            <td>Corrupted Policy</td>
+            <td>Unintentionally modified policy due to a previous weakness (e.g., with a decompress operation).</td>
           </tr>
           <tr>
-            <td>Not Enough Allocated</td>
-            <td>The allocated memory is too little for the data it should store.</td>
+            <td>Tampered Policy</td>
+            <td>Maliciously modified policy due to a previous weakness (e.g., with an authorize operation).</td>
           </tr>
-
         </table>
       </ul>
       <p>
         <FontS>Consequences</FontS>
       </p>
-      <ul>The graph of consequences shows <i> Improper Pointer for Next Operation</i>, <i>Improper object for Next
-          Operation</i>, and <i>Memory Error</i>.</ul>
+      <ul>The graph of consequences shows <i> Improper Data for Next Operation</i> and <i>Injection Error </i>as consequences.</ul>
       <ul>
         <table class="table">
           <thead class="thead-light">
             <tr>
-              <th colspan="2">Improper Pointer for Next Operation</th>
+              <th colspan="2">Improper Data for Next Operation</th>
             </tr>
           </thead>
           <thead>
@@ -677,63 +668,85 @@
             </tr>
           </thead>
           <tr>
-            <td>NULL Pointer</td>
-            <td>Points to the zero address, a specific invalid address.</td>
+            <td>Invalid Data</td>
+            <td>Data with harmed syntax due to sanitization errors.</td>
           </tr>
+          
 
 
         </table>
         <table class="table">
-          <thead class="thead-light">
+            <thead class="thead-light">
+              <tr>
+                <th colspan="3">Injection Error</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th class="w-25">Value</th>
+                <th>Definition</th>
+                <th>Example</th>
+              </tr>
+            </thead>
             <tr>
-              <th colspan="2">Improper Object for Next Operation</th>
+              <td>Query Injection</td>
+              <td>Malicious insertion of condition parts (e.g., or 1==1) or entire commands (e.g., drop table) into an input used to construct a database query.</td>
+            <td><li>SQL Injection</li>
+                <li>No SQL Injection</li>
+                <li>XPath Injection</li>
+                <li>XQuery Injection</li>
+                <li>LDAP Injection
+                </li></td>
             </tr>
-          </thead>
-          <thead>
             <tr>
-              <th class="w-25">Value</th>
-              <th>Definition</th>
+                <td>Command Injection</td>
+                <td>Malicious insertion of new commands into the input to a command that is sent to an operat- ing system (OS) or to a server.</td>
+                <td><li>OS Command Injection</li>
+                    <li>Regular Expression Injection</li>
+                    <li>IMAP/SMTP Command Injection</li>
+                    <li>Object Injection (JSON server side)</li>
+                    </td>  
             </tr>
-          </thead>
-          <tr>
-            <td>Not Enough Allocated</td>
-            <td>The allocated memory is too little for the data it should store.</td>
-          </tr>
-
-
-        </table>
-        <table class="table">
-          <thead class="thead-light">
-            <tr>
-              <th colspan="2">Memory Error</th>
+              <tr>
+                <td>Source Code Injection</td>
+                <td>Malicious insertion of new code (incl. with <> elements) into input used as part of an exe- cuting application code.</td>
+                <td><li>Cross Site Scripting (XSS)</li>
+                    <li>CSS Injection</li>
+                    <li>Eval Injection</li>
+                    <li>EL Injection</li>
+                    <li>JSON Injection (Client or Server Side)
+                    </li></td>  
             </tr>
-          </thead>
-          <thead>
-            <tr>
-              <th class="w-25">Value</th>
-              <th>Definition</th>
+              <tr>
+                <td>Parameter Injection</td>
+                <td>Malicious insertion of data (e.g., with & pa- rameter separator) into input used as param- eter/argument in other parts of code.</td>
+                <td><li>Argument Injection</li>
+                    <li>Format String Injection</li>
+                    <li>Email Injection</li>
+                    <li>HTTP Header Injection (incl.
+                        Server Header Injection)</li>
+                    <li>Reflection Injection</li>
+                <li>Flash Injection</li>
+            <li>CRLF Injection (incl. HTTP
+                Header Splitting)</li></td>  
             </tr>
-          </thead>
-          <tr>
-            <td>Memory Leak</td>
-            <td>An object has no pointer pointing to it.</td>
-          </tr>
-          <tr>
-            <td>Double Free</td>
-            <td>Attempt to deallocate a deallocated object or via an uninitialized pointer.</td>
-          </tr>
-          <tr>
-            <td>Object Corruption</td>
-            <td>Object data is unintentionally altered.</td>
-          </tr>
-
-
-        </table>
+              <tr>
+                <td>File Injection</td>
+                <td>Malicious insertion of data (e.g., with .. and / or with file entries) into input used to ac- cess/modify files or as file content.</td>
+                <td><li>CSV, Temp, etc. File Injection</li>
+                    <li>Log Entry Injection</li>
+                    <li>XML Injection</li>
+                    <li>CRLF Injection (incl. in as in
+                        log entry files)</li>
+                    <li>Relative Path Traversal</li>
+                <li>Absolute Path Traversal</li></td>  
+            </tr>
+          </table>
       </ul>
       <p>
         <FontS>Attributes</FontS>
       </p>
-      <ul>The attributes of MDL are: </ul>
+      <ul>The attributes of DVL are: </ul>
       <ul>
         <table class="table">
           <thead>
@@ -744,13 +757,22 @@
             </tr>
           </thead>
           <tr>
-            <td rowspan="2" style="vertical-align: middle;">Mechanism</td>
-            <td>Implicit</td>
-            <td>The operation is performed without a function call.</td>
+            <td rowspan="4" style="vertical-align: middle;">Mechanism</td>
+            <td>Safelist</td>
+            <td>Policy based on a set of known good content.</td>
           </tr>
           <tr>
-            <td>Explicit</td>
-            <td>The operation is performed by a function/ method) call.</td>
+            
+            <td>Denylist</td>
+            <td>Policy based on a set of known bad content; helps reject outright maliciously malformed data.</td>
+          </tr>
+          <tr>
+            <td>Format</td>
+            <td>Policy based on syntax format (e.g., defined via regular expression).</td>
+          </tr>
+          <tr>
+            <td>Length</td>
+            <td>Policy based on allowed number of characters in data. Note that this is not about the data value as size of an object.</td>
           </tr>
           <tr>
             <td rowspan="4" style="vertical-align: middle;">Source Code</td>
@@ -772,14 +794,12 @@
           </tr>
           <tr>
             <td rowspan="3" style="vertical-align: middle;">Execution Space</td>
-            <td>Userland</td>
-            <td>The bugged code runs in an environment with privilege levels, but in unprivileged mode (e.g., ring 3 in
-              x86 architecture).</td>
+            <td>Local</td>
+            <td>The bugged code runs in an environment with access control policy with limited (local user) permission.</td>
           </tr>
           <tr>
-            <td>Kernel</td>
-            <td>The bugged code runs in an environment with privilege levels with access privileged instruc- tions
-              (e.g., ring 0 in x86 architecture).</td>
+            <td>Admin</td>
+            <td>The bugged code runs in an environment with access control policy with unlimited (admin user) permission.</td>
           </tr>
           <tr>
             <td>Bare-Metal</td>
@@ -787,44 +807,37 @@
               software running and has total access to the hardware.</td>
           </tr>
           <tr>
-            <td rowspan="3" style="vertical-align: middle;">Ownership</td>
-            <td>None</td>
-            <td>The object has no owner.</td>
+            <td rowspan="4" style="vertical-align: middle;">State</td>
+            <td>Entered</td>
+            <td>Data comes from user interface (e.g., text field).</td>
           </tr>
           <tr>
-            <td>Single</td>
-            <td>The object has one owner.</td>
+            <td>Stored</td>
+            <td>Data comes from permanent storage (e.g., file, database on a storage device).</td>
           </tr>
           <tr>
-            <td>Shared</td>
-            <td>The object has more than one owner.</td>
+            <td>In Use</td>
+            <td>Data comes from volatile storage (e.g., RAM, cache memory).</td>
           </tr>
 
           <tr>
-            <td rowspan="2" style="vertical-align: middle;">Location</td>
-            <td>Stack</td>
-            <td>The object is a non-static local variable (defined in a function, a passed parameters, or a function
-              return address).</td>
+            <td>Transferred</td>
+            <td>Data comes via network (e.g., connecting analog device or another computer).</td>
           </tr>
-          <tr>
-            <td>Heap</td>
-            <td>The object is a dynamically allocated data structure (e.g., via malloc() and new).</td>
-          </tr>
+          
 
         </table>
       </ul>
+
       <p>
         <FontS>Sites</FontS>
       </p>
-      <ul>MDL sites are any deallocation routine (e.g., <code>free()</code>) or the <code>del</code> operator, any end
-        of scope for implicit allocated variables, any OOP destructor, or any reduction routine (e.g.,
-        <code>realoc()</code>) or removing elements from a container object.</ul>
+      <ul>A site for input/output check bugs is any part of the code that should check and sanitize data syntax or check and correct data semantics.</ul>
 
 
       <FontS>Application</FontS>
       </p>
-      <ul>Application examples are provided <a href="../Examples/MAL.html" target="_blank">here</a>.</ul>
-
+      <ul>Application examples are provided <a href="../Examples/DVL.html" target="_blank">here</a>.</ul>
 
 
     </div>

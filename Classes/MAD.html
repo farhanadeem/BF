@@ -751,62 +751,55 @@
             </tr>
           </thead>
           <tr>
-            <td>Mechanism</td>
+            <td rowspan="2" style="vertical-align: middle;">Mechanism</td>
             <td>Direct</td>
             <td>The operation is performed over a particular object element.</td>
           </tr>
           <tr>
-            <td>Mechanism</td>
             <td>Sequential</td>
             <td>The operation is performed after iterating over the object elements.</td>
           </tr>
           <tr>
-            <td>Source Code</td>
+            <td rowspan="4" style="vertical-align: middle;">Source Code</td>
             <td>Codebase</td>
             <td>The operation is in programmer’s code – in the application itself.</td>
           </tr>
           <tr>
-            <td>Source Code</td>
             <td>Third Party</td>
             <td>The operation is in a third party library.</td>
           </tr>
           <tr>
-            <td>Source Code</td>
             <td>Standard Library</td>
             <td>The operation is in the standard library for a particular programming language.</td>
           </tr>
           <tr>
-            <td>Source Code</td>
             <td>Language Processor</td>
             <td>The operation is in the tool that allows execution or creates executable (compiler, assembler,
               interpreter).</td>
           </tr>
           <tr>
-            <td>Execution Space</td>
+            <td rowspan="3" style="vertical-align: middle;">Execution Space</td>
             <td>Userland</td>
             <td>The bugged code runs in an environment with privilege levels, but in unprivileged mode (e.g., ring 3 in
               x86 architecture).</td>
           </tr>
           <tr>
-            <td>Execution Space</td>
             <td>Kernel</td>
             <td>The bugged code runs in an environment with privilege levels with access privileged instruc- tions
               (e.g., ring 0 in x86 architecture).</td>
           </tr>
           <tr>
-            <td>Execution Space</td>
             <td>Bare-Metal</td>
             <td>The bugged code runs in an environment with-out privilege control. Usually, the program is the only
               software running and has total access to the hardware.</td>
           </tr>
           <tr>
-            <td>Location</td>
+            <td rowspan="2" style="vertical-align: middle;">Location</td>
             <td>Stack</td>
             <td>The object is a non-static local variable (defined in a function, a passed parameters, or a function
               return address).</td>
           </tr>
           <tr>
-            <td>Location</td>
             <td>Heap</td>
             <td>The object is a dynamically allocated data structure (e.g., via malloc() and new).</td>
           </tr>
