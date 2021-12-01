@@ -457,7 +457,7 @@
       <ul><strong>Attributes: </strong>
         <ul>Language: <attribute>CGI</attribute>
         </ul>
-        <ul>Special Element: <attribute>Shell Metacharacters</attribute> (back ticks ` )</ul>
+        <ul>Special Element: <attribute>Shell Metacharacters</attribute> (back ticks `)</ul>
 
         <ul>Entry Point: <attribute>Function Parameter</attribute> ("param")</ul>
         <ul><u>Invalid Construct</u>: <attribute>Command</attribute> (command within a Ping command)</ul>
@@ -472,7 +472,7 @@
       </p>
       <p>
       <ul>"<cause>Input not checked properly</cause> (<sub-cause>incomplete blacklist</sub-cause>) allows <attribute>
-          Shell metacharacters</attribute> (back ticks ` ) through a <attribute>function parameter</attribute> ("param")
+          Shell metacharacters</attribute> (back ticks `( through a <attribute>function parameter</attribute> ("param")
         in a <attribute>CGI</attribute> script and assembly of a string that is parsed into an invalid <attribute>
           command</attribute> construct (command within a Ping command), which may be exploited to <consequence>add
           command</consequence>, leading to <consequence>arbitrary code execution</consequence> and potentially

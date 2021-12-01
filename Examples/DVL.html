@@ -555,7 +555,7 @@
 
 
     </ul>
-    <ul><strong>Consequence: </strong><consequence>Injection Error</consequence> - File Injec�on (Path Traversal)</ul>
+    <ul><strong>Consequence: </strong><consequence>Injection Error</consequence> - File Injection (Path Traversal)</ul>
     
    
   <p><fontSS>Brief Description:</fontSS></p>
@@ -596,13 +596,13 @@
 
 
     </ul>
-    <ul><strong>Consequence: </strong><consequence>Injection Error</consequence> - Query Injection (SQL Injec�on)</ul>
+    <ul><strong>Consequence: </strong><consequence>Injection Error</consequence> - Query Injection (SQL Injection)</ul>
     
   <p><fontSS>Brief Description:</fontSS></p>
       <p><ul>Sequelize is an Object-Relational Mapper for <code>Node.js</code>. It supports Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server; it facilitates transaction support, relations, and lazy loading. In several versions <code>query-generator.js</code> allows SQL injection.</ul></p>
   
   <p><fontSS>Analysis</fontSS></p>
-      <p><ul>User input path is not sanitized for MySQL/MariaDB syntax in a JSON (JavaScript Object No- tation) object.</ul></p>
+      <p><ul>User input path is not sanitized for MySQL/MariaDB syntax in a JSON (JavaScript Object Notation) object.</ul></p>
   <p><fontSS>The Fix</fontSS></p>
       <p><ul>To fix the bug, the developers check the input paths syntax and sanitize it.</ul></p>
   
