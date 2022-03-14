@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Data Verification (DVR) Class</title>
+  <title>Data Validation (DVL) Class</title>
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Source%20Code%20Pro" rel="stylesheet" type="text/css">
@@ -137,15 +137,16 @@
                   <li>
                     <a href="Validation.html">Validation</a>
                   </li>
-                  <li>
-                    <a href="DVL.html">DVL</a>
+                  <li class="active">
+                    <a href="INP/DVL.html">DVL</a>
                   </li>
   
-                  <li class="active">
-                    <a href="DVR.html">DVR</a>
+                  <li>
+                    <a href="INP/DVR.html">DVR</a>
                   </li>
                 </ul>
               </li>
+
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cryptography">
               <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents6">
@@ -231,6 +232,7 @@
                 <li>
                   <a href="MDL.html">MDL</a>
                 </li>
+                
               </ul>
             </li>
 
@@ -311,12 +313,12 @@
               <ul class="sidenav-third-level collapse " id="collapseComponents28"> 
 
                 <li>
-                  <a href="../Examples/DVL.html">DVL</a>
+                  <a href="../Examples/INP/DVL.html">DVL</a>
                 </li>
 
 
                 <li>
-                  <a href="../Examples/DVR.html">DVR</a>
+                  <a href="../Examples/INP/DVR.html">DVR</a>
                 </li>
               </ul>
             </li>
@@ -544,27 +546,27 @@
 
     <div class="container-fluid" align="center">
 
-      <fontST>Data Verification (DVR) Class</fontST>
+      <fontST>Data Validation (DVL) Class</fontST>
     </div>
 
     <div class="container-fluid" align="left">
       <p>
         <FontS>Definition</FontS>
       </p>
-      <ul>We define Data Verification Bugs (DVR) as follows:</ul>
-      <ul><span class="text-primary"><i>Data are verified (semantics check) or corrected (assign value, remove) improperly.</i></span></ul>
+      <ul>We define Data Validation Bugs (DVL) as follows:</ul>
+      <ul><span class="text-primary"><i>Data are validated (syntax check) or sanitized (escape, filter, repair) improperly.</i></span></ul>
 
       
       <p>
         <FontS>Taxonomy</FontS>
       </p>
-      <ul>Fig. 1 depicts DVR causes, attributes and consequences. </ul>
+      <ul>Fig. 1 depicts DVL causes, attributes and consequences. </ul>
       <ul></ul>
       <div align="center">
-        <p><a target="_blank" href="images/DVR.png"><img style="max-height:400px" src="images/DVR.png"></a></p>
+        <p><a target="_blank" href="images/DVL.png"><img style="max-height:500px" class="" src="images/DVL.png"></a></p>
         <p><em>Fig 1.
 
-            Data Verification Bugs (DVR) Class<span class="text-info">
+            Data Validation Bugs (DVL) Class<span class="text-info">
               - click on image for detailed view</span>.</em></p>
       </div>
 
@@ -572,7 +574,7 @@
         <FontS>Operations</FontS>
       </p>
       <ul>
-        The DVR operations are: Verify and Correct. They reflect the improper check and modification of data semantics.</ul>
+        The DVL operations are: Validate and Sanitize. They reflect the improper check and modification of data syntax.</ul>
       <ul>
         <table class="table">
           <thead>
@@ -582,12 +584,12 @@
             </tr>
           </thead>
           <tr>
-            <td>Verify</td>
-            <td>Check data semantics (proper value/meaning) in order to accept (and possibly correct) or reject it.</td>
+            <td>Validate</td>
+            <td>Check data syntax (proper form/grammar) in order to accept (and possibly sanitize) or reject it. Includes checking for missing symbols/elements.</td>
           </tr>
           <tr>
-            <td>Correct</td>
-            <td>Modify data (assign new value, remove), in order to make it accurate.</td>
+            <td>Sanitize</td>
+            <td>Modify data (neutralize/escape, filter/remove, repair/add symbols) in order to make it valid (well-formed).</td>
           </tr>
           
 
@@ -596,8 +598,8 @@
       <p>
         <FontS>Causes</FontS>
       </p>
-      <ul>The graph of causes shows that there are two main causes for data verification bugs: Improper Operation and
-        Improper Data.</ul>
+      <ul>The graph of causes shows that there are three main causes for data validation bugs: Improper Operation,
+        Improper Data, and Improper Policy.</ul>
       <ul>
         <table class="table">
           <thead class="thead-light">
@@ -608,8 +610,8 @@
           <thead>
             <tr>
               <th class="w-25">Value</th>
-              <th>Definition</th>
-              <th>Example</th>
+              <th >Definition</th>
+              <th class="w-50">Example</th>
             </tr>
           </thead>
           <tr>
@@ -652,19 +654,42 @@
             </tr>
           </thead>
           <tr>
-            <td>Invalid Data</td>
-            <td>Data with harmed syntax due to sanitization errors.</td>
+            <td>Corrupted Data</td>
+            <td>Unintentionally modified data due to a previous weakness (e.g., with a decompress or a decrypt operation) that if not sanitized would end-up as invalid data for next weakness.</td>
           </tr>
-          
+          <tr>
+            <td>Tampered Data</td>
+            <td>Maliciously modified data due to a previous weakness (e.g., with a deserialize, authorize, or crypto verify operation) that would lead to injection error.</td>
+          </tr>
           
 
         </table>
-        
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th colspan="2">Improper Policy</th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th class="w-25">Value</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Corrupted Policy</td>
+            <td>Unintentionally modified policy due to a previous weakness (e.g., with a decompress operation).</td>
+          </tr>
+          <tr>
+            <td>Tampered Policy</td>
+            <td>Maliciously modified policy due to a previous weakness (e.g., with an authorize operation).</td>
+          </tr>
+        </table>
       </ul>
       <p>
         <FontS>Consequences</FontS>
       </p>
-      <ul>The graph of consequences shows <i> Improper Data for Next Operation</i> as a consequence.</ul>
+      <ul>The graph of consequences shows <i> Improper Data for Next Operation</i> and <i>Injection Error </i>as consequences.</ul>
       <ul>
         <table class="table">
           <thead class="thead-light">
@@ -682,28 +707,82 @@
             <td>Invalid Data</td>
             <td>Data with harmed syntax due to sanitization errors.</td>
           </tr>
-          <tr>
-            <td>Wrong Value</td>
-            <td>Data with harmed semantics; not accurate value (e.g., outside of a range).</td>
-          </tr>
-          <tr>
-            <td>Inconsistent Value</td>
-            <td>Data value is inconsistent with the value of a related data (e.g., inconstancy between the value of a size variable and the actual buffer size).</td>
-          </tr>
-          <tr>
-            <td>Wrong Type</td>
-            <td>Data with wrong data type.</td>
-          </tr>
           
 
 
         </table>
-        
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th colspan="3">Injection Error</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th class="w-25">Value</th>
+                <th>Definition</th>
+                <th >Example</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>Query Injection</td>
+              <td>Malicious insertion of condition parts (e.g., or 1==1) or entire commands (e.g., drop table) into an input used to construct a database query.</td>
+            <td><li>SQL Injection</li>
+                <li>No SQL Injection</li>
+                <li>XPath Injection</li>
+                <li>XQuery Injection</li>
+                <li>LDAP Injection
+                </li></td>
+            </tr>
+            <tr>
+                <td>Command Injection</td>
+                <td>Malicious insertion of new commands into the input to a command that is sent to an operating system (OS) or to a server.</td>
+                <td><li>OS Command Injection</li>
+                    <li>Regular Expression Injection</li>
+                    <li>IMAP/SMTP Command Injection</li>
+                    <li>Object Injection (JSON server side)</li>
+                    </td>  
+            </tr>
+              <tr>
+                <td>Source Code Injection</td>
+                <td>Malicious insertion of new code (incl. with <> elements) into input used as part of an executing application code.</td>
+                <td><li>Cross Site Scripting (XSS)</li>
+                    <li>CSS Injection</li>
+                    <li>Eval Injection</li>
+                    <li>EL Injection</li>
+                    <li>JSON Injection (Client or Server Side)
+                    </li></td>  
+            </tr>
+              <tr>
+                <td>Parameter Injection</td>
+                <td>Malicious insertion of data (e.g., with & parameter separator) into input used as parameter/argument in other parts of code.</td>
+                <td><li>Argument Injection</li>
+                    <li>Format String Injection</li>
+                    <li>Email Injection</li>
+                    <li>HTTP Header Injection (incl.
+                        Server Header Injection)</li>
+                    <li>Reflection Injection</li>
+                <li>Flash Injection</li>
+            <li>CRLF Injection (incl. HTTP
+                Header Splitting)</li></td>  
+            </tr>
+              <tr>
+                <td>File Injection</td>
+                <td>Malicious insertion of data (e.g., with .. and / or with file entries) into input used to access/modify files or as file content.</td>
+                <td><li>CSV, Temp, etc. File Injection</li>
+                    <li>Log Entry Injection</li>
+                    <li>XML Injection</li>
+                    <li>CRLF Injection (incl. in as in
+                        log entry files)</li>
+                    <li>Relative Path Traversal</li>
+                <li>Absolute Path Traversal</li></td>  
+            </tr>
+          </table>
       </ul>
       <p>
         <FontS>Attributes</FontS>
       </p>
-      <ul>The attributes of DVR are: </ul>
+      <ul>The attributes of DVL are: </ul>
       <ul>
         <table class="table">
           <thead>
@@ -714,26 +793,22 @@
             </tr>
           </thead>
           <tr>
-            <td rowspan="5" style="vertical-align: middle;">Mechanism</td>
-            <td>Value</td>
-            <td>Check data for a specific value (incl. NULL or list of values).</td>
+            <td rowspan="4" style="vertical-align: middle;">Mechanism</td>
+            <td>Safelist</td>
+            <td>Policy based on a set of known good content.</td>
           </tr>
           <tr>
             
-            <td>Quantity</td>
-            <td>Check data for a specific measurable value (e.g., size, time, rate, frequency).</td>
+            <td>Denylist</td>
+            <td>Policy based on a set of known bad content; helps reject outright maliciously malformed data.</td>
           </tr>
           <tr>
-            <td>Range</td>
-            <td>Check data are within a (min, max) interval.</td>
+            <td>Format</td>
+            <td>Policy based on syntax format (e.g., defined via regular expression).</td>
           </tr>
           <tr>
-            <td>Type</td>
-            <td>Check data type (e.g., int, float, XSD-XML Schema Definition, or specific structure/object).</td>
-          </tr>
-          <tr>
-            <td>Other Rules</td>
-            <td>Check data against other business logic.</td>
+            <td>Length</td>
+            <td>Policy based on allowed number of characters in data. Note that this is not about the data value as size of an object.</td>
           </tr>
           <tr>
             <td rowspan="4" style="vertical-align: middle;">Source Code</td>
@@ -798,7 +873,7 @@
 
       <FontS>Application</FontS>
       </p>
-      <ul>Application examples are provided <a href="../Examples/DVR.html" target="_blank">here</a>.</ul>
+      <ul>Application examples are provided <a href="../Examples/DVL.html" target="_blank">here</a>.</ul>
 
 
     </div>
